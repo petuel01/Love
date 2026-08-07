@@ -1,0 +1,13 @@
+services:
+  tofaith:
+    container_name: tofaith
+    build: .
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - mypotfolio_default
+
+networks:
+  mypotfolio_default:
+    external: true
